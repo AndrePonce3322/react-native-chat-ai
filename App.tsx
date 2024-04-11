@@ -40,7 +40,7 @@ export default function App() {
     Vibration.vibrate(100)
     setInputHeight(50) // Reset the input height
     setChatHistory([...chatHistory, { role: 'USER', message }])
-    const res = await fetch('https://t05ldsk3-3000.use2.devtunnels.ms/api/hello', {
+    const res = await fetch('https://chatai-api.vercel.app/api/hello', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export default function App() {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('https://t05ldsk3-3000.use2.devtunnels.ms/api/hello')
+      const res = await fetch('https://chatai-api.vercel.app/api/hello')
 
       const data = await res.json() as ChatAI
       // Send to the chat history
